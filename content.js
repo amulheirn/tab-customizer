@@ -39,6 +39,7 @@
     function saasTitle() {
       if (section && networkId) return `${capitalize(section)} ${networkId}`;
       if (networkId) return `Fwd (${networkId})`;
+      if (section) return `Fwd (${section})`;
       return "FwdApp";
     }
 
