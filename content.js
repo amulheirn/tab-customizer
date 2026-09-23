@@ -71,6 +71,11 @@
         icon: "icons/icons8-red-dot-32.png"
       },
       {
+        test: () => host === "beta1.fwd.app",
+        title: saasTitle(),
+        icon: "icons/icons8-sun-32.png"
+      },
+      {
         test: () => host === "scaling700.ext.forwardnetworks.com",
         title: "S700",
         icon: "icons/icons8-bomb-32.png"
