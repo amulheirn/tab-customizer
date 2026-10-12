@@ -72,7 +72,7 @@
       },
       {
         test: () => host === "beta1.fwd.app",
-        title: saasTitle(),
+        title: "b1 " + saasTitle(),
         icon: "icons/icons8-sun-32.png"
       },
       {
