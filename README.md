@@ -10,9 +10,9 @@ This is a small Chrome extension that sets a custom tab title and favicon for va
 - `beta1.fwd.app` → "b1"
 
 The result looks like this.  The format of the tab text is 
-- a short reference to denote the site the tab is on
-- the name of the app you are using on that site
-- the network-id 
+- a short reference to denote the site (e.g. b1 for beta1, SF for SkyForge)
+- the name of the app you are using on that site (e.g. forward-ai)
+- the network-id (e.g. 125)
 
 ![Example of customized browser tabs](readme-image.jpg)
 
