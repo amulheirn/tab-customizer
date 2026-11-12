@@ -37,6 +37,18 @@
     const section = getSection(query);
 
     function saasTitle() {
+      // Log pages, e.g. /api/networks/257598/collections/logs/tail?deviceName=X
+      if (/logs/i.test(path + query)) {
+        // Completed logs: /api/networks/N/logs/completed/<deviceName>
+        const completed = path.match(/\/logs\/completed\/([^/?]+)/i);
+        if (completed) return `Logs ${decodeURIComponent(completed[1])}`;
+        const deviceName = new URLSearchParams(
+          query.slice(query.lastIndexOf("?") + 1)
+        ).get("deviceName");
+        // Tailing logs: /collections/logs/tail?deviceName=X
+        const label = /\/logs\/tail/i.test(path) ? "LogTail" : "Logs";
+        return deviceName ? `${label} ${deviceName}` : label;
+      }
       if (section && networkId) return `${capitalize(section)} ${networkId}`;
       if (networkId) return `Fwd (${networkId})`;
       if (section) return `Fwd (${section})`;
