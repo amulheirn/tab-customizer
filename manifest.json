@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Custom Tab Titles & Favicons in chrome",
-  "version": "1.3",
+  "version": "1.4",
   "description": "Override the Forward Networks favicon and title to help differentiate between them when you have multiple tabs open.  Andrew Mulheirn, 29th July 2026.  Updated 3rd Sep to show login tabs.",
   "icons": {
    "16": "icons/fwd-16.png",
@@ -15,7 +15,8 @@
         "https://fwd.app/*",
         "https://docs.fwd.app/*",
         "https://beta1.fwd.app/*",
-        "https://scaling700.ext.forwardnetworks.com/*"
+        "https://scaling700.ext.forwardnetworks.com/*",
+        "https://skyforge-fwd.dc.forwardnetworks.com/*"
       ],
       "js": ["content.js"],
       "run_at": "document_start"
@@ -24,7 +25,13 @@
   "web_accessible_resources": [
     {
       "resources": ["icons/*.png"],
-      "matches": ["https://fwd.app/*", "https://docs.fwd.app/*", "https://beta1.fwd.app/*", "https://scaling700.ext.forwardnetworks.com/*"]
+      "matches": [
+        "https://fwd.app/*", 
+        "https://docs.fwd.app/*", 
+        "https://beta1.fwd.app/*", 
+        "https://scaling700.ext.forwardnetworks.com/*",
+        "https://skyforge-fwd.dc.forwardnetworks.com/*"
+      ]
     }
   ]
 }

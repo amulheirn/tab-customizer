@@ -79,6 +79,16 @@
         test: () => host === "scaling700.ext.forwardnetworks.com",
         title: "S700",
         icon: "icons/icons8-bomb-32.png"
+      },
+      {
+        test: () => host === "skyforge-fwd.dc.forwardnetworks.com",
+        title: "SF " + saasTitle(),
+        icon: "icons/icons8-anvil-32.png"
+      },
+      {
+        test: () => host === "beta2.fwd.app",
+        title: "b2 " + saasTitle(),
+        icon: "icons/icons8-green-circle-32.png"
       }
     ];
 
